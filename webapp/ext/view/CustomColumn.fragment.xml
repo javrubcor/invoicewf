@@ -1,0 +1,9 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<Column id="ExtensionWizard::ColumnBreakout" width="5rem">
+		<!--<Text text=""/>-->
+		<customData>
+			<core:CustomData key="p13nData" value='\{"columnKey": "Test", "columnIndex" : "100"}'/>
+			<!--id="_IDEGen_customdata0"<core:CustomData key="p13nData" value='\{"columnKey": "Test", "columnIndex" : "101", value="{=     (${DaysTillDue} === '20' ) ? 'Red'}}'/>			-->
+		</customData>
+	</Column>
+</core:FragmentDefinition>

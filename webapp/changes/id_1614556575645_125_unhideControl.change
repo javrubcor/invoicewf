@@ -1,0 +1,33 @@
+{
+	"fileName": "id_1614556575645_125_unhideControl",
+	"fileType": "change",
+	"changeType": "unhideControl",
+	"moduleName": "",
+	"reference": "invoicewf.invoicewf.Component",
+	"packageName": "$TMP",
+	"content": {},
+	"selector": {
+		"id": "invoicewf.invoicewf::sap.suite.ui.generic.template.ObjectPage.view.Details::Invoice_HeaderSet--HeaderToWorkitem_User::com.sap.vocabularies.UI.v1.LineItem::Table-btnPersonalisation",
+		"idIsLocal": false
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/invoicewf.invoicewf/changes/",
+	"projectId": "invoicewf.invoicewf",
+	"creation": "2021-02-28T23:57:01.763Z",
+	"originalLanguage": "EN",
+	"support": {
+		"generator": "sap.ui.rta FlexCommand",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.85.4",
+		"sourceChangeFileName": "",
+		"compositeCommand": "id_1614556575639_123_composite",
+		"command": "reveal"
+	},
+	"oDataInformation": {},
+	"dependentSelector": {},
+	"jsOnly": false,
+	"variantReference": "",
+	"appDescriptorChange": false
+}

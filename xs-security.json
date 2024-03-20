@@ -1,0 +1,20 @@
+{
+  "xsappname": "invoicewfinvoicewf",
+  "tenant-mode": "dedicated",
+  "description": "Security profile of called application",
+  "scopes": [
+    {
+			"name": "$XSAPPNAME.Display",
+			"description": "Display App"
+		}
+  ],
+  "role-templates": [
+{
+  "name": "SupplierWf_Role",
+  "description":"SupplierWf_Role",
+  "scope-references": [
+    "$XSAPPNAME.Display"
+  ]
+}
+  ]
+}

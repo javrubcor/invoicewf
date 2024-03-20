@@ -1,0 +1,7 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+
+	<!--<Button id="quickViewBtn" text="Display Agents" visible="{IsActiveActionAgents}" press=".handleQuickViewBtnPress"></Button>-->
+	
+	<Button id="quickViewBtn" text="Agents" visible="{ path: 'WorkflowStatus', formatter:'.buttonActive'}" press=".handleQuickViewBtnPress"></Button>	
+
+</core:FragmentDefinition>

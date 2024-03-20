@@ -1,0 +1,37 @@
+{
+	"fileName": "id_1622131636257_152_propertyChange",
+	"fileType": "change",
+	"changeType": "propertyChange",
+	"moduleName": "",
+	"reference": "invoicewf.invoicewf.Component",
+	"packageName": "$TMP",
+	"content": {
+		"property": "backgroundDesign",
+		"newValue": "Solid"
+	},
+	"selector": {
+		"id": "invoicewf.invoicewf::sap.suite.ui.generic.template.ObjectPage.view.Details::Invoice_HeaderSet--HeaderToWorkitem_User::com.sap.vocabularies.UI.v1.LineItem::LineItem::responsiveTable",
+		"type": "sap.m.Table",
+		"idIsLocal": false
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/invoicewf.invoicewf/changes/",
+	"projectId": "invoicewf.invoicewf",
+	"creation": "2021-05-27T16:07:18.783Z",
+	"originalLanguage": "EN",
+	"support": {
+		"generator": "sap.ui.rta.command",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.88.0",
+		"sourceChangeFileName": "",
+		"compositeCommand": "",
+		"command": "property"
+	},
+	"oDataInformation": {},
+	"dependentSelector": {},
+	"jsOnly": false,
+	"variantReference": "",
+	"appDescriptorChange": false
+}

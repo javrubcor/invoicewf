@@ -1,0 +1,37 @@
+{
+	"fileName": "id_1643794999988_211_propertyChange",
+	"fileType": "change",
+	"changeType": "propertyChange",
+	"moduleName": "",
+	"reference": "invoicewf.invoicewf.Component",
+	"packageName": "$TMP",
+	"content": {
+		"property": "maxExcludes",
+		"newValue": "-3"
+	},
+	"selector": {
+		"id": "vhd1-filterPanel",
+		"type": "sap.ui.comp.p13n.P13nFilterPanel",
+		"idIsLocal": false
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/invoicewf.invoicewf/changes/",
+	"projectId": "invoicewf.invoicewf",
+	"creation": "2022-02-02T09:44:07.916Z",
+	"originalLanguage": "EN",
+	"support": {
+		"generator": "sap.ui.rta.command",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.97.0",
+		"sourceChangeFileName": "",
+		"compositeCommand": "",
+		"command": "property"
+	},
+	"oDataInformation": {},
+	"dependentSelector": {},
+	"jsOnly": false,
+	"variantReference": "",
+	"appDescriptorChange": false
+}

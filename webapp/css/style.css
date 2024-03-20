@@ -1,0 +1,192 @@
+.greenTxtHlight {
+    color: green !important;
+    background: green !important;   
+    background-color: green !important;    
+}
+
+.yellowTxtHlight {
+    color: yellow !important;
+}
+
+.redTxtHlight {
+    color: red;
+}
+
+
+
+.sapMPopover {
+    background: #fff !important;
+}
+
+.HowBlckBgrnd {
+    background-color: #28343d;
+}
+
+.sapMLabel {
+    font-family: Rooster !important;
+    color: grey !important;
+}
+
+.sapUxAPObjectPageHeaderDetails .sapMLabel {
+    color: grey !important;
+}
+
+.sapMInputBaseIcon {
+    background: lightgrey !important;
+}
+
+.sapMTableTH {
+    background-color: #979c96 !important;
+    background: #979c96 !important;
+    color: #979c96 !important;
+}
+
+.sapMListTbl .sapMLabel {
+    color: #333 !important;
+}
+
+
+span.sapMBtnInner.sapMBtnEmphasized {
+    width: 100px !important;
+    height: 40px !important;
+    border-radius: 24px !important;
+    background-color: green !important;
+    border-color: green !important;
+    color: #fff !important;
+}
+
+
+
+
+
+
+.sapMBtnInner {
+    font-family: Rooster !important;
+    background-color: green !important;
+    border-radius: 24px !important;
+    border: .0625rem solid green !important;
+    color: #fff !important;
+}
+
+.sapUiIcon::before {
+    color: black;
+}
+
+
+.sapUxAPObjectPageSubSection {
+    background-color: #f3f2f2;
+}
+
+.sapMLnk {
+    color: #4a90e2 !important;
+}
+
+.sapMGrowingListTrigger {
+    display: none !important;
+}
+
+
+
+
+
+
+.sapFDynamicPageContent {
+    font-family: Rooster;
+    color: red;
+}
+
+.sapMListTblCell {
+    font-family: Rooster;
+    color: red;
+}
+
+.sapMListTblCellNoData {
+    font-family: Rooster;
+    color: red;
+}
+
+.sapMColumnHeader {
+    font-family: Rooster;
+    color: black;
+}
+
+.sapUiBody {
+    font-family: Rooster;
+    color: black;
+}
+
+.sapMShellGlobalOuterBackground {
+    font-family: Rooster;
+    color: black;
+}
+
+.sapMShellGlobalInnerBackground {
+    font-family: Rooster;
+    color: black;
+}
+
+.sapUiBodyBackground {
+    font-family: Rooster;
+    color: black;
+}
+
+.sapUiAFLayout {
+    font-family: Rooster;
+    color: black;
+}
+
+.sapFFCL {
+    font-family: Rooster;
+    color: black;
+}
+
+.sapFFCLColumn {
+    font-family: Rooster;
+    color: black;
+}
+
+sapFFCLColumnActive {
+    font-family: Rooster;
+    color: black;
+}
+
+.sapMTitle {
+    font-family: Rooster;
+    color: black;
+}
+
+.sapMTB {
+    font-family: Rooster;
+    color: black;
+}
+
+
+.sapUxAPObjectPageHeaderDetails.sapMLabel {
+    font-family: Rooster;
+    color: black;
+}
+
+.sapSmartTemplatesObjectPage {
+    font-family: Rooster;
+    color: black;
+}
+
+.sapUxAPObjectPageHeaderContent {
+    font-family: Rooster;
+    color: black;
+}
+
+.sapUxAPObjectPageHeaderContentItem {
+    font-family: Rooster;
+    color: black;
+}
+
+.sapSmartTemplatesObjectPage {
+    font-family: Rooster;
+    color: black;
+}
+
+.sapSmartTemplatesObjectPageDynamicPageHeader {
+    font-family: Rooster;
+    color: black;
+}

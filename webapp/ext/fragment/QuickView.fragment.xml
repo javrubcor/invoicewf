@@ -1,0 +1,16 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<QuickView>
+		<QuickViewPage>
+			<QuickViewGroup heading="Agents" elements="{HeaderToWorkitem_User}">
+				<!--<QuickViewGroupElement label="Name   -   Reserved   -   Phone   -   Email  - Days" value="{Fullname} {Reserved} {PhoneNumber} {EmailAddress} {Days}"/>-->
+				
+				<QuickViewGroupElement 
+					label="{Fullname}  -  {Reserved} -  {Days}"
+					value="{PhoneNumber}  -  {EmailAddress}"
+					/>				
+
+			</QuickViewGroup>
+		</QuickViewPage>
+	</QuickView>
+	
+</core:FragmentDefinition>

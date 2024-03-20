@@ -1,0 +1,8 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<Column id="ExtensionWizard::ColumnBreakout">
+		<Text id="_IDEGen_text0" text="Sample column"/>
+		<customData>
+			<core:CustomData id="_IDEGen_customdata0" key="p13nData" value='\{"columnKey": "DaysColor", "leadingProperty":"DaysTillDue", "columnIndex" : "2"}'/>
+		</customData>
+	</Column>
+</core:FragmentDefinition>

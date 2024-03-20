@@ -1,0 +1,71 @@
+{
+	"fileName": "id_1614556575642_124_moveControls",
+	"fileType": "change",
+	"changeType": "moveControls",
+	"moduleName": "",
+	"reference": "invoicewf.invoicewf.Component",
+	"packageName": "$TMP",
+	"content": {
+		"movedElements": [{
+			"selector": {
+				"id": "invoicewf.invoicewf::sap.suite.ui.generic.template.ObjectPage.view.Details::Invoice_HeaderSet--HeaderToWorkitem_User::com.sap.vocabularies.UI.v1.LineItem::Table-btnShowHideDetails",
+				"idIsLocal": false
+			},
+			"sourceIndex": 3,
+			"targetIndex": 0
+		}],
+		"source": {
+			"selector": {
+				"aggregation": "content",
+				"type": "sap.m.OverflowToolbar",
+				"id": "invoicewf.invoicewf::sap.suite.ui.generic.template.ObjectPage.view.Details::Invoice_HeaderSet--HeaderToWorkitem_User::com.sap.vocabularies.UI.v1.LineItem::Table::Toolbar",
+				"idIsLocal": false
+			}
+		},
+		"target": {
+			"selector": {
+				"aggregation": "content",
+				"type": "sap.m.OverflowToolbar",
+				"id": "invoicewf.invoicewf::sap.suite.ui.generic.template.ObjectPage.view.Details::Invoice_HeaderSet--HeaderToWorkitem_User::com.sap.vocabularies.UI.v1.LineItem::Table::Toolbar",
+				"idIsLocal": false
+			}
+		}
+	},
+	"selector": {
+		"id": "invoicewf.invoicewf::sap.suite.ui.generic.template.ObjectPage.view.Details::Invoice_HeaderSet--HeaderToWorkitem_User::com.sap.vocabularies.UI.v1.LineItem::Table::Toolbar",
+		"idIsLocal": false
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/invoicewf.invoicewf/changes/",
+	"projectId": "invoicewf.invoicewf",
+	"creation": "2021-02-28T23:57:01.759Z",
+	"originalLanguage": "EN",
+	"support": {
+		"generator": "sap.ui.rta FlexCommand",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.85.4",
+		"sourceChangeFileName": "",
+		"compositeCommand": "id_1614556575639_123_composite",
+		"command": "move"
+	},
+	"oDataInformation": {},
+	"dependentSelector": {
+		"source": {
+			"id": "invoicewf.invoicewf::sap.suite.ui.generic.template.ObjectPage.view.Details::Invoice_HeaderSet--HeaderToWorkitem_User::com.sap.vocabularies.UI.v1.LineItem::Table::Toolbar",
+			"idIsLocal": false
+		},
+		"target": {
+			"id": "invoicewf.invoicewf::sap.suite.ui.generic.template.ObjectPage.view.Details::Invoice_HeaderSet--HeaderToWorkitem_User::com.sap.vocabularies.UI.v1.LineItem::Table::Toolbar",
+			"idIsLocal": false
+		},
+		"movedElements": [{
+			"id": "invoicewf.invoicewf::sap.suite.ui.generic.template.ObjectPage.view.Details::Invoice_HeaderSet--HeaderToWorkitem_User::com.sap.vocabularies.UI.v1.LineItem::Table-btnShowHideDetails",
+			"idIsLocal": false
+		}]
+	},
+	"jsOnly": false,
+	"variantReference": "",
+	"appDescriptorChange": false
+}

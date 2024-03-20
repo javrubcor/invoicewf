@@ -1,0 +1,393 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference Uri="/SAPC_DEV_DL1106/sap/opu/odata/sap/Z1674_INVOICE_WORKFLOW_SRV/$metadata">
+		<edmx:Include Alias="Metadata" Namespace="Z1674_INVOICE_WORKFLOW_SRV"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470968/UI.xml?api=v2">
+		<edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470971/Communication.xml?api=v2">
+		<edmx:Include Alias="Communication" Namespace="com.sap.vocabularies.Communication.v1"/>
+	</edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="invoicewf.annotation0.Z1674_INVOICE_WORKFLOW_SRV">
+			<Annotations Target="Metadata.Invoice_Header">
+				<Annotation Term="UI.FieldGroup" Qualifier="AdditionalInfo">
+					<Record Type="UI.FieldGroupType">
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="PriceDif"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="QuanDif"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="Sgtxt"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="System"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Label" String="Additional Info"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.CollectionFacet">
+							<PropertyValue Property="Facets">
+								<Collection>
+									<Record Type="UI.ReferenceFacet">
+										<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#BasicData"/>
+										<PropertyValue Property="Label" String="{@i18n&gt;Basic}"/>
+										<PropertyValue Property="ID" String="BasicData"/>
+									</Record>
+									<Record Type="UI.ReferenceFacet">
+										<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#AccountingDetails"/>
+										<PropertyValue Property="ID" String="AccountingDetails"/>
+										<PropertyValue Property="Label" String="{@i18n&gt;AccDet}"/>
+									</Record>
+								</Collection>
+							</PropertyValue>
+							<PropertyValue Property="ID" String="GeneralInformation"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;General}"/>
+						</Record>
+						<Record Type="UI.CollectionFacet">
+							<PropertyValue Property="Facets">
+								<Collection>
+									<Record Type="UI.ReferenceFacet">
+										<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#PurchaseOrder"/>
+										<PropertyValue Property="Label" String="{@i18n&gt;PO}"/>
+										<PropertyValue Property="ID" String="Purchaseorder"/>
+									</Record>
+								</Collection>
+							</PropertyValue>
+							<PropertyValue Property="Label" String="{@i18n&gt;POR}"/>
+							<PropertyValue Property="ID" String="Purchaseorderreferences"/>
+						</Record>
+						<Record Type="UI.CollectionFacet">
+							<PropertyValue Property="Facets">
+								<Collection>
+									<Record Type="UI.ReferenceFacet">
+										<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Payment"/>
+										<PropertyValue Property="Label" String="{@i18n&gt;PY}"/>
+										<PropertyValue Property="ID" String="PaymentRF"/>
+									</Record>
+								</Collection>
+							</PropertyValue>
+							<PropertyValue Property="Label" String="{@i18n&gt;PY}"/>
+							<PropertyValue Property="ID" String="Payment"/>
+						</Record>
+						<Record Type="UI.ReferenceFacet">
+							<PropertyValue Property="Target" AnnotationPath="HeaderToWorkitem_User/@UI.LineItem#LineItem"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;WF}"/>
+						</Record>
+						<Record Type="UI.CollectionFacet">
+							<PropertyValue Property="Facets">
+								<Collection>
+									<Record Type="UI.ReferenceFacet">
+										<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#AdditionalInfo"/>
+										<PropertyValue Property="Label" String="Additional Info"/>
+										<PropertyValue Property="ID" String="AdditionalRF"/>
+									</Record>
+								</Collection>
+							</PropertyValue>
+							<PropertyValue Property="Label" String="Additional Info"/>
+							<PropertyValue Property="ID" String="Additional"/>
+						</Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.SelectionFields">
+					<Collection>
+						<PropertyPath>InvoiceID</PropertyPath>
+						<PropertyPath>PostingDate</PropertyPath>
+						<PropertyPath>DocumentDate</PropertyPath>
+						<PropertyPath>RefDocumentNumber</PropertyPath>
+						<PropertyPath>DaysTillDue</PropertyPath>
+						<PropertyPath>Sgtxt</PropertyPath>
+						<PropertyPath>UserName</PropertyPath>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.Facets" Qualifier="GeneralInformation">
+					<Collection>
+						<Record Type="UI.CollectionFacet">
+							<PropertyValue Property="Facets">
+								<Collection>
+									<Record Type="UI.ReferenceFacet">
+										<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#AccountingDetails"/>
+										<PropertyValue Property="Label" String="{@i18n&gt;AccDet}"/>
+										<PropertyValue Property="ID" String="Accounting Details"/>
+									</Record>
+									<Record Type="UI.ReferenceFacet">
+										<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#BasicData"/>
+										<PropertyValue Property="Label" String="{@i18n&gt;Basic}"/>
+										<PropertyValue Property="ID" String="Basic Data"/>
+									</Record>
+								</Collection>
+							</PropertyValue>
+							<PropertyValue Property="Label" String="{@i18n&gt;General}"/>
+							<PropertyValue Property="ID" String="General Information"/>
+						</Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="InvoiceUsers">
+					<Record Type="UI.FieldGroupType">
+						<PropertyValue Property="Label" String="{@i18n&gt;LIST_OF_USERS}"/>
+						<PropertyValue Property="Data" Path="@UI.LineItem"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="PurchaseOrder">
+					<Record Type="UI.FieldGroupType">
+						<PropertyValue Property="Label" String="{@i18n&gt;PO}"/>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="HeaderToDetail/PoDate"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="HeaderToDetail/PoCreator"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="HeaderToDetail/PuGroup"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="HeaderToDetail/PuDescription"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="HeaderToDetail/PoNumber"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="HeaderToDetail/ReleaseStrategy"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="HeaderToDetail/Descriptionofreleasestrategy"/>
+									<PropertyValue Property="Label" String="Release Strategy Desc."/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="Payment">
+					<Record Type="UI.FieldGroupType">
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="Paymentblock"/>
+									<PropertyValue Property="Label" String="{@i18n&gt;PB}"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="PaymentMethod"/>
+									<PropertyValue Property="Label" String="{@i18n&gt;PM}"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Label" String="{@i18n&gt;PY}"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="AccountingDetails">
+					<Record Type="UI.FieldGroupType">
+						<PropertyValue Property="Label" String="{@i18n&gt;AccDet}"/>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="HeaderToDetail/DocumentType"/>
+									<PropertyValue Property="Label" String="{@i18n&gt;DT}"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="HeaderToDetail/DocumentTypeDescription"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="HeaderToDetail/ItemText"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="BasicData">
+					<Record Type="UI.FieldGroupType">
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="InvoiceID"/>
+									<PropertyValue Property="Label" String="{@i18n&gt;Invoicenumber}"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="HeaderToDetail/CompanyCode"/>
+									<PropertyValue Property="Label" String="{@i18n&gt;CC}"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="PostingDate"/>
+									<PropertyValue Property="Label" String="{@i18n&gt;PD}"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="DocumentDate"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="DueDate"/>
+									<PropertyValue Property="Label" String="Due Date"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="DaysTillDue"/>
+									<PropertyValue Property="Label" String="Days Till Due"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="RefDocumentNumber"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="ERFNAM"/>
+									<PropertyValue Property="Label" String="Invoice Creator"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="party_id">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Value" Path="InvoicingPartyID"/>
+						<PropertyValue Property="Title" String="{@i18n&gt;Invoicingparty}"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="party_name">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Value" Path="InvoicingPartyName"/>
+						<PropertyValue Property="Title" String="{@i18n&gt;Invoicingpartyname}"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="GrossAmount">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Value" Path="GrossAmount"/>
+						<PropertyValue Property="Title" String="{@i18n&gt;Amount}"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="Currency">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Value" Path="Currency"/>
+						<PropertyValue Property="Title" String="{@i18n&gt;CURR}"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record Type="UI.HeaderInfoType">
+						<PropertyValue Property="TypeName" String="{@i18n&gt;Invoicenumber}"/>
+						<PropertyValue Property="TypeNamePlural" String="{@i18n&gt;Invoicenumbers}"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<!--						<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">-->
+						<!--	<Record>-->
+						<!--		<PropertyValue Property="width" String="10rem"/>-->
+						<!--	</Record>-->
+						<!--</Annotation>-->
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="InvoicingPartyID"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;Invoicingparty}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<!--<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">-->
+							<!--	<Record>-->
+							<!--		<PropertyValue Property="width" String="8rem"/>-->
+							<!--	</Record>-->
+							<!--</Annotation>-->
+							<PropertyValue Property="Value" Path="InvoicingPartyName"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;Invoicingpartyname}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="InvoiceID"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;Invoicenumber}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="RefDocumentNumber"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<!--<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">-->
+							<!--	<Record>-->
+							<!--		<PropertyValue Property="width" String="10rem"/>-->
+							<!--	</Record>-->
+							<!--</Annotation>-->
+							<PropertyValue Property="Value" Path="UserName"/>
+							<PropertyValue Property="Label" String="Agent"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="GrossAmount"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;Amount}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<!--<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">-->
+							<!--	<Record>-->
+							<!--		<PropertyValue Property="width" String="4rem"/>-->
+							<!--	</Record>-->
+							<!--</Annotation>-->
+							<PropertyValue Property="Value" Path="Currency"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;CURR}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="DueDate"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<!--<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">-->
+							<!--	<Record>-->
+							<!--		<PropertyValue Property="width" String="6rem"/>-->
+							<!--	</Record>-->
+							<!--</Annotation>-->
+							<PropertyValue Property="Value" Path="DaysTillDue"/>
+							<PropertyValue Property="Criticality" Path="Criticality"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="WorkflowStatus"/>
+							<Annotation Term="UI.Hidden"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Sgtxt"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="PuDescription"/>
+						</Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="Metadata.Workitem_User">
+				<Annotation Term="Communication.Contact" Qualifier="CommunicationItem">
+					<Record Type="Communication.ContactType">
+						<PropertyValue Property="tel">
+							<Collection>
+								<Record Type="Communication.PhoneNumberType">
+									<PropertyValue Property="uri" Path="Username"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="email">
+							<Collection>
+								<Record Type="Communication.EmailAddressType">
+									<PropertyValue Property="type" Path="Fullname"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.LineItem" Qualifier="LineItem">
+					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Username"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Fullname"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="PhoneNumber"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="EmailAddress"/>
+							<Annotation Term="UI.Hidden" Bool="true"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Days"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Reserved"/>
+						</Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

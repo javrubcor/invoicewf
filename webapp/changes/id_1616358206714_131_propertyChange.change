@@ -1,0 +1,37 @@
+{
+	"fileName": "id_1616358206714_131_propertyChange",
+	"fileType": "change",
+	"changeType": "propertyChange",
+	"moduleName": "",
+	"reference": "invoicewf.invoicewf.Component",
+	"packageName": "$TMP",
+	"content": {
+		"property": "textInEditModeSource",
+		"newValue": "None"
+	},
+	"selector": {
+		"id": "invoicewf.invoicewf::sap.suite.ui.generic.template.ObjectPage.view.Details::Invoice_HeaderSet--BasicData::InvoiceID::Field",
+		"type": "sap.ui.comp.smartfield.SmartField",
+		"idIsLocal": false
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/invoicewf.invoicewf/changes/",
+	"projectId": "invoicewf.invoicewf",
+	"creation": "2021-03-21T20:24:09.960Z",
+	"originalLanguage": "EN",
+	"support": {
+		"generator": "sap.ui.rta.command",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.87.0",
+		"sourceChangeFileName": "",
+		"compositeCommand": "",
+		"command": "property"
+	},
+	"oDataInformation": {},
+	"dependentSelector": {},
+	"jsOnly": false,
+	"variantReference": "",
+	"appDescriptorChange": false
+}

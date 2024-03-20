@@ -1,0 +1,73 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:smartfilterbar="sap.ui.comp.smartfilterbar" xmlns:core="sap.ui.core">
+	<smartfilterbar:ControlConfiguration id="_IDEGen_controlconfiguration0" key="User" index="2" label="Company Code" groupId="_BASIC">
+		<smartfilterbar:customControl>
+			<ComboBox id="comboboxCc" required='true' change="handleCompCode" placeholder="Enter Company Code" showSecondaryValues="true"
+				items="{ path: '/CompanycodeListSet', sorter: { path: 'CompCode' } }">
+				<core:ListItem id="_IDEGen_listitem0" key="{CompCode}" text="{CompCode}" additionalText="{CompName}"/>
+			</ComboBox>
+		</smartfilterbar:customControl>
+	</smartfilterbar:ControlConfiguration>
+	
+	<smartfilterbar:ControlConfiguration id="_IDEGen_controlconfiguration1" key="User2" index="3" label="Invoice Status" groupId="_BASIC">
+		<smartfilterbar:customControl>
+			<MultiComboBox id="comboboxSt" required='true' selectionChange="handleStatus" placeholder="Enter Invoice Status" showSecondaryValues="true"
+				items="{ path: '/InvoiceStatusListSet', sorter: { path: 'Domvalue_l' } }">
+				<core:ListItem id="_IDEGen_listitem1" key="{Domvalue_l}" text="{Domvalue_l}" additionalText="{Ddtext}"/>
+			</MultiComboBox>
+		</smartfilterbar:customControl>
+		
+	</smartfilterbar:ControlConfiguration>
+	<smartfilterbar:ControlConfiguration id="_IDEGen_controlconfiguration2" key="User3" index="1" label="System" groupId="_BASIC"
+		change="handleSystem">
+		<smartfilterbar:customControl>
+			<MultiComboBox id="comboboxSy" selectedKeys="SAPC" showSecondaryValues="true" required='true' placeholder="Enter system">
+				<core:Item id="_IDEGen_item0" key="SAPC" text="SAP Central"/>
+				<core:Item id="_IDEGen_item1" key="SAPM" text="SAP Manufacturing"/>
+			</MultiComboBox>
+		</smartfilterbar:customControl>
+	</smartfilterbar:ControlConfiguration>
+	<smartfilterbar:ControlConfiguration id="_IDEGen_controlconfiguration3" key="User4" index="6" label="Accounting Clerks" groupId="_BASIC">
+		<smartfilterbar:customControl>
+			<MultiComboBox id="comboboxAc" showSecondaryValues="true" items="{ path: '/ClerkNumberListSet', sorter: { path: 'BUSAB' } }">
+				<core:ListItem id="_IDEGen_listitem2" key="{BUSAB}" text="{BUSAB}" additionalText="{SNAME}"/>
+			</MultiComboBox>
+		</smartfilterbar:customControl>
+	</smartfilterbar:ControlConfiguration>
+	<smartfilterbar:ControlConfiguration id="_IDEGen_controlconfiguration4" key="User5" index="4" label="Fiscal Year" groupId="_BASIC">
+		<smartfilterbar:customControl>
+			<Input id="FiscalYear" type="Number" maxLength="4" placeholder="Enter year (nnnn)" required='true' liveChange="handleFiscalYear"/>
+		</smartfilterbar:customControl>
+	</smartfilterbar:ControlConfiguration>
+
+<!--commentout-->
+
+	<smartfilterbar:ControlConfiguration groupId="GlobalFilters" id="_IDEGen_controlconfiguration5" key="VendorNo" index="5"
+		label="Vendor Number" visibleInAdvancedArea="true">
+		<smartfilterbar:customControl>
+			<MultiInput id="multiVendor" valueHelpRequest=".onValueHelpRequested" required="true" placeholder="Enter Vendor"
+				suggestionRows="{ path: '/VendorListSet', sorter: { path: 'System', 'VendorNo' }, length: 10 }">
+				<suggestionColumns>
+					<Column id="column1">
+						<Label id="label1" text="System"/>
+					</Column>
+					<Column id="column2">
+						<Label id="label2" text="VendorNo"/>
+					</Column>
+					<Column id="column3">
+						<Label id="label3" text="Name"/>
+					</Column>
+				</suggestionColumns>
+				<suggestionRows>
+					<ColumnListItem id="columnlistitem1">
+						<cells>
+							<Label id="label4" text="{System}"/>
+							<Label id="label5" text="{VendorNo}"/>
+							<Label id="label6" text="{Name}"/>
+						</cells>
+					</ColumnListItem>
+				</suggestionRows>
+			</MultiInput>
+		</smartfilterbar:customControl>
+	</smartfilterbar:ControlConfiguration>
+
+</core:FragmentDefinition>

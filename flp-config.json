@@ -1,0 +1,35 @@
+{
+    "application": {
+        "id": "",
+        "title": "invoicewf.invoicewf.invoicewf2",
+        "description": "Supplier Invoice Workflow Report",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/",
+        "appUrl": "#invoicewf2-Display",
+        "navigationComponentName": "invoicewf.invoicewf",
+        "intentSemanticObject": "invoicewf2",
+        "intentAction": "Display",
+        "html5ApplicationName": "invoicewf2",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "abacd82b-0a41-46ed-8f76-2beb861d8602-1582539188649"
+        ],
+        "contentPackages": [
+            "6939ef96-d64a-4248-887b-c3824862fc0c-1582539157153"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Supplier Invoice WF",
+        "subtitle": "Subtitle",
+        "searchKeywords": "Supplier Invoice WF,Subtitle",
+        "displayIconUrl": "sap-icon://supplier",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}

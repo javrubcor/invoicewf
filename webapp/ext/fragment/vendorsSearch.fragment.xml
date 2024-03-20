@@ -1,0 +1,26 @@
+<core:FragmentDefinition xmlns="sap.ui.comp.valuehelpdialog" xmlns:m="sap.m" xmlns:fb="sap.ui.comp.filterbar" xmlns:core="sap.ui.core">
+	<ValueHelpDialog id="vhd1" title="Vendors for Company Code: {oModelCC>/CompCode}" ok=".onValueHelpOkPress" cancel=".onValueHelpCancelPress" afterClose=".onValueHelpAfterClose"
+		supportRanges="true" key="VendorNo" descriptionKey="Name">
+		<filterBar>
+			<fb:FilterBar advancedMode="true" id="fb1" search=".onFilterBarSearch">
+				<fb:filterGroupItems>
+					<fb:FilterGroupItem id="fg3" groupName="gVendor" name="System" label="System" visibleInFilterBar="true">
+						<fb:control>
+							<m:Input id="i3" name="System"/>
+						</fb:control>
+					</fb:FilterGroupItem>
+					<fb:FilterGroupItem id="fg1" groupName="gVendor" name="VendorNo" label="Vendor" visibleInFilterBar="true">
+						<fb:control>
+							<m:Input id="i1" name="VendorNo"/>
+						</fb:control>
+					</fb:FilterGroupItem>
+					<fb:FilterGroupItem id="fg2" groupName="gVendor" name="Name" label="Vendor Name" visibleInFilterBar="true">
+						<fb:control>
+							<m:Input id="i2" name="Name"/>
+						</fb:control>
+					</fb:FilterGroupItem>
+				</fb:filterGroupItems>
+			</fb:FilterBar>
+		</filterBar>
+	</ValueHelpDialog>
+</core:FragmentDefinition>

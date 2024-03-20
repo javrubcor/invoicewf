@@ -1,0 +1,80 @@
+var vbox = new sap.m.VBox({
+                  items : [
+                    new sap.m.Label({
+                      text: 'CategoryName'
+                    }),
+                    // Create the input field, binding the suggested items to the
+                    // product objects in the data model
+                    new sap.m.Input("input_assisted1", {
+                      type: sap.m.InputType.Text,
+                      placeholder: 'Enter Product ...',
+                      showSuggestion: true,
+                      suggestionItems: {
+                        path: "/value",
+                        template: new sap.ui.core.Item({
+                          text: "{CategoryName}"
+                        })
+                      },
+                      showValueHelp: true,
+                      valueHelpRequest: function (oEvent) {
+                       
+                          var model = new sap.ui.model.json.JSONModel();
+                          newurl = "http://services.odata.org/Northwind/Northwind.svc/Categories/?$filter=startswith(CategoryName,%27"+sap.ui.getCore().byId("input_assisted1").getValue()+"%27)";
+                          model.loadData(newurl,null, false, "GET",false, false, null);
+                            // Handling of both confirm and cancel; clear the filter
+                        handleClose = function (oEvent) {
+                          var oSelectedItem = oEvent.getParameter("selectedItem");
+                          if (oSelectedItem) {
+                            sap.ui.getCore().byId("input_assisted1").setValue(oSelectedItem.getTitle());
+                          }
+                          oEvent.getSource().getBinding("items").filter([]);
+                        };
+                        // Create a SelectDialog and display it; bind to the same
+                        // model as for the suggested items
+                        if (!this._valueHelpSelectDialog) {
+                                               this._valueHelpSelectDialog = new sap.m.SelectDialog("valueHelpSelectDialog", {
+                            title: "Categories",
+                            items: {
+                              path: "/value",
+                              template: new sap.m.StandardListItem({
+                                title: "{CategoryName}",
+                                active: true
+                              })
+                            },
+                            search: function (oEvent) {
+                              var sValue = oEvent.getParameter("value");
+                              var oFilter = new sap.ui.model.Filter(
+                                "CategoryName",
+                                sap.ui.model.FilterOperator.Contains, sValue
+                              );
+                              oEvent.getSource().getBinding("items").filter([oFilter]);
+                            },
+                            confirm: handleClose,
+                            cancel: handleClose
+                          });
+                                              
+                          this._valueHelpSelectDialog.setModel(model);
+                        
+                        }
+                        else
+                            { this._valueHelpSelectDialog.setModel(model);
+                              }
+                        this._valueHelpSelectDialog.open();
+                     
+                      }
+                    })
+                  ]
+                });
+                
+					"sap.suite.ui.generic.template.ObjectPage.view.Details": {
+						"AfterMainContent|Invoice_HeaderSet|com.sap.vocabularies.UI.v1.FieldGroup::Workflow": {
+							"equalSplit": true,
+							"type": "XML",							
+							"className": "sap.ui.core.mvc.View",
+							"viewName": "invoicewf.invoicewf.ext.view.workflowlog",
+							"sap.ui.generic.app": {
+								"title": "{@i18n>workflowlog}"
+							}
+						}
+					}                
+                
